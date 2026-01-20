@@ -1,0 +1,4 @@
+{
+  "type" : "FeatureCollection",
+  "features" : [{"type":"Feature","id":1,"geometry":{"type":"Point","coordinates":[30.562247663000051,25.32153930100003]},"properties":{"OID":1,"Name":"محطة الرفع","code":"504"}}]
+}

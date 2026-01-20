@@ -1,0 +1,4 @@
+{
+  "type" : "FeatureCollection",
+  "features" : [{"type":"Feature","id":1,"geometry":{"type":"Point","coordinates":[30.555972420000046,25.315812235000067]},"properties":{"OID":1,"Name":"برج إشارة هواتف","code":"39","discription":"نخلة اشارة"}}]
+}

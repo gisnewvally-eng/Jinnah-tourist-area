@@ -1,0 +1,4 @@
+{
+  "type" : "FeatureCollection",
+  "features" : [{"type":"Feature","id":1,"geometry":{"type":"Point","coordinates":[30.554709400000036,25.33083060000007]},"properties":{"OID":1,"Name":"غرفة تليفونات","code":"38","discription":"manhole"}},{"type":"Feature","id":2,"geometry":{"type":"Point","coordinates":[30.553224915000044,25.313409198000045]},"properties":{"OID":2,"Name":"غرفة تليفونات","code":"38","discription":"manhole"}}]
+}

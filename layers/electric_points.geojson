@@ -1,0 +1,4 @@
+{
+  "type" : "FeatureCollection",
+  "features" : [{"type":"Feature","id":1,"geometry":{"type":"Point","coordinates":[30.555126900000062,25.321775500000058]},"properties":{"OID":1,"Name":"محول كهربائي","code":"49","discription":"300 kva القدرة الكهربائية"}}]
+}

@@ -1,0 +1,4 @@
+{
+  "type" : "FeatureCollection",
+  "features" : [{"type":"Feature","id":1,"geometry":{"type":"Point","coordinates":[30.555721971000025,25.320908322000037]},"properties":{"OID":1,"Name":"غرفة محابس","code":"61","discription":"بها 3 محابس - 6 بوصة"}}]
+}
