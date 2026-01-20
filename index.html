@@ -472,10 +472,11 @@ document.querySelectorAll('input[name="basemap"]').forEach(radio => {
 //  أيقونات النقاط (Images folder)
 // ----------------------------------
 const icons = {
-  electrictrans: L.icon({ iconUrl: "images/electrictrans.png", iconSize: [18, 18] }),
+  electrictrans: L.icon({ iconUrl: "images/electric_trans.png", iconSize: [18, 18] }),
   streetlight: L.icon({ iconUrl: "images/streetlight.png", iconSize: [18, 18] }),
-  networking: L.icon({ iconUrl: "images/networking.png", iconSize: [18, 18] }),
-  valve: L.icon({ iconUrl: "images/valve.png", iconSize: [18, 18] }),
+  manhole: L.icon({ iconUrl: "images/manhole.png", iconSize: [18, 18] }),
+  signal_tower: L.icon({ iconUrl: "images/signal_tower.png", iconSize: [18, 18] }),
+  valve: L.icon({ iconUrl: "images/water_valve.png", iconSize: [18, 18] }),
   sewer: L.icon({ iconUrl: "images/sewer.png", iconSize: [18, 18] }),
   sewer_station: L.icon({ iconUrl: "images/Sewer_station.png", iconSize: [18, 18] }),
   gas_icon: L.icon({ iconUrl: "images/gas_valve.png", iconSize: [18, 18] }),
@@ -492,18 +493,21 @@ const icons = {
 // ----------------------------------
 const layersInfo = {
 
-  "خطوط الكهرباء ⚡": { file: "layers/electric_lines.geojson", color: "#ff0000" },
+  "خطوط الكهرباء ⚡": { file: "layers/electric_polylines.geojson", color: "#ff0000" },
+  "خطوط الكهرباء ضغط عالي ⚡": { file: "layers/electric_polylines_high.geojson", color: "#a30808" },
   "محولات الكهرباء ⚡": { file: "layers/electric_points.geojson", icon: icons.electrictrans },
+  "اعمدة الانارة 💡": { file: "layers/streetlight_points.geojson", icon: icons.streetlight },
 
   "خطوط الإنترنت 🌐": { file: "layers/landline_lines.geojson", color: "#00cc66" },
-  "نقاط توزيع خطوط الإنترنت 🌐": { file: "layers/landline_points.geojson", icon: icons.networking },
+  "غرفة خطوط الإنترنت 🌐": { file: "layers/landline_manhole.geojson", icon: icons.manhole },
+  "برج شبكة الإنترنت 🌐": { file: "layers/signal_tower.geojson", icon: icons.signal_tower },
 
   "خطوط المياه💧": { file: "layers/water_lines.geojson", color: "#007bff" },
   "محابس المياه 🚰": { file: "layers/water_points.geojson", icon: icons.valve },
 
-  "خطوط الصرف الصحي 🚽": { file: "layers/sewer_line.geojson", color: "#800080" },
-  "غرف تفتيش الصرف 💿": { file: "layers/sewer_points_search.geojson", icon: icons.sewer },
-  "غرف صرف صحي (مطابق) 💿": { file: "layers/sewer_points1.geojson", icon: icons.sewer },
+  "خطوط الصرف الصحي ": { file: "layers/sewer_line.geojson", color: "#800080" },
+  "غرف صرف صحي (مطابق) ": { file: "layers/sewer_points1.geojson", icon: icons.sewer },
+   "محطة الرفع": {file:"layers/sewer_station.geojson", icon:icons.sewer_station},
   
 
   "خطوط الغاز ♨": { file: "layers/gas_lines.geojson", color: "#FF8C00" },
@@ -522,12 +526,15 @@ const groups = {
 
   "الكهرباء ⚡": [
     "خطوط الكهرباء ⚡",
-    "محولات الكهرباء ⚡"
+    "خطوط الكهرباء ضغط عالي ⚡",
+    "محولات الكهرباء ⚡",
+    "اعمدة الانارة 💡"
   ],
 
   "الإنترنت 🌐": [
     "خطوط الإنترنت 🌐",
-    "نقاط توزيع خطوط الإنترنت 🌐"
+    "غرفة خطوط الإنترنت 🌐",
+    "برج شبكة الإنترنت 🌐"
   ],
 
   "المياه 💧🚰": [
@@ -535,10 +542,10 @@ const groups = {
     "محابس المياه 🚰"
   ],
 
-  "الصرف الصحي 💿🚽": [
-    "خطوط الصرف الصحي 🚽",
-    "غرف تفتيش الصرف 💿",
-    "غرف صرف صحي (مطابق) 💿",
+  "الصرف الصحي ": [
+    "خطوط الصرف الصحي ",
+    "غرف صرف صحي (مطابق) ",
+    "محطة الرفع"
   ],
 
   "الغاز ♨": [
@@ -764,6 +771,7 @@ northArrow.addEventListener("click", () => {
 </script>
 </body>
 </html>
+
 
 
 
